@@ -1,0 +1,44 @@
+# Priority scoring rules - edit freely, no code changes needed
+
+high:
+  min_scale_m2: 5000
+  min_units: 50
+  stages:
+    - "pozwolenie na budowe wydane"
+    - "pozwolenie wydane"
+    - "przetarg otwarty"
+    - "realizacja"
+    - "w budowie"
+  investment_types:
+    - "komercyjny"
+    - "przemyslowy"
+    - "biurowy"
+    - "magazynowy"
+    - "uslugowy"
+  keywords:
+    - "pilne"
+    - "termin"
+    - "przetarg"
+    - "Q1"
+    - "Q2"
+    - "Q3"
+    - "Q4"
+    - "2026"
+    - "deadline"
+  require_full_contact: false  # set true to require name+phone+email for HIGH
+
+medium:
+  min_scale_m2: 1000
+  min_units: 10
+  stages:
+    - "projekt budowlany"
+    - "pozwolenie w trakcie"
+    - "zgłoszenie"
+  investment_types:
+    - "mieszkalny wielorodzinny"
+    - "uzytkowy"
+
+low:
+  # Anything not matching HIGH or MEDIUM defaults to LOW
+  auto_downgrade_if_duplicate: true
+  auto_downgrade_if_no_contact: true

@@ -1,0 +1,58 @@
+# Polish voivodeship to sales region mapping
+# Edit to add/change reps or reassign voivodeships
+
+regions:
+  A:
+    rep_name: "Jan Nowak"
+    rep_email: "j.nowak@company.pl"
+    voivodeships:
+      - "Wielkopolskie"
+      - "Slaskie"
+      - "Lubuskie"
+    cities_override: []  # specific cities to always route here regardless of voivodeship
+
+  B:
+    rep_name: "Anna Wisniewska"
+    rep_email: "a.wisniewska@company.pl"
+    voivodeships:
+      - "Dolnoslaskie"
+      - "Opolskie"
+    cities_override: []
+
+  C:
+    rep_name: "Piotr Zawadzki"
+    rep_email: "p.zawadzki@company.pl"
+    voivodeships:
+      - "Mazowieckie"
+      - "Lodzkie"
+      - "Kujawsko-Pomorskie"
+    cities_override: []
+
+  D:
+    rep_name: "Katarzyna Grabowska"
+    rep_email: "k.grabowska@company.pl"
+    voivodeships:
+      - "Malopolskie"
+      - "Podkarpackie"
+      - "Swietokrzyskie"
+    cities_override: []
+
+  E:
+    rep_name: "Tomasz Lewandowski"
+    rep_email: "t.lewandowski@company.pl"
+    voivodeships:
+      - "Pomorskie"
+      - "Warminsko-Mazurskie"
+      - "Zachodniopomorskie"
+    cities_override: []
+
+  F:
+    rep_name: "Monika Zielinska"
+    rep_email: "m.zielinska@company.pl"
+    voivodeships:
+      - "Lubelskie"
+      - "Podlaskie"
+      - "Swietokrzyskie"
+    cities_override: []
+
+fallback_region: "A"  # if voivodeship cannot be determined
