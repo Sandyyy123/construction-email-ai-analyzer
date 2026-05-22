@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Construction Email AI Analyzer — Sandeep Grover</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -42,71 +41,32 @@ footer{text-align:center;padding:32px;color:var(--muted);font-size:.82rem;border
 </style>
 </head>
 <body>
-
 <nav>
   <a href="https://sandyyy123.github.io" class="nav-back">← Portfolio</a>
   <span class="nav-title">Construction Email AI Analyzer</span>
   <a href="https://github.com/Sandyyy123/construction-email-ai-analyzer" target="_blank" class="nav-back" style="margin-left:auto">GitHub ↗</a>
 </nav>
-
 <div class="hero">
   <h1>Construction Email AI Analyzer</h1>
   <p>Parses Polish construction investment emails, extracts structured leads (type/stage/location/contact), scores priority, routes to regional reps, deduplicates across sources.</p>
   <div class="badges"><span class="badge">GPT-4o</span> <span class="badge">LangChain</span> <span class="badge">FastAPI</span> <span class="badge">SQLite</span></div>
   <div class="metric-bar">✦ 16 voivodeships · 90-day dedup · 3 priority levels</div>
 </div>
-
 <div class="card">
   <div class="section-title">Interactive Demo</div>
   <div class="highlight">16 voivodeships | 90-day dedup | GPT-4o extraction</div>
   <p style="font-size:.82rem;color:#94a3b8;margin-bottom:16px">Lead Priority Distribution (Sample 500 Emails)</p>
-  <div class="demo-container">
-<canvas id="myChart"></canvas>
-<script>
-new Chart(document.getElementById('myChart'), {
-  type: 'bar',
-  data: {
-    labels: ["High Priority", "Medium Priority", "Low Priority", "Duplicate", "Not a Lead"],
-    datasets: [{
-      label: 'Email Count',
-      data: [87, 164, 142, 73, 34],
-      backgroundColor: ["rgba(99,102,241,0.7)", "rgba(139,92,246,0.85)", "rgba(99,102,241,0.7)", "rgba(99,102,241,0.7)", "rgba(99,102,241,0.7)"],
-      borderColor: 'rgba(99,102,241,0.3)',
-      borderWidth: 1,
-      borderRadius: 6
-    }]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y.toLocaleString() } }
-    },
-    scales: {
-      y: {
-        beginAtZero: true,
-        grid: { color: 'rgba(255,255,255,0.05)' },
-        ticks: { color: '#94a3b8', font: { size: 11 } },
-        title: { display: true, text: 'Email Count', color: '#818cf8', font: { size: 12 } }
-      },
-      x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 11 } } }
-    }
-  }
-});
-</script></div>
+  <div class="demo-container"><canvas id="myChart"></canvas><script>
+new Chart(document.getElementById('myChart'),{type:'bar',data:{labels:["High Priority", "Medium Priority", "Low Priority", "Duplicate", "Not a Lead"],datasets:[{label:'Email Count',data:[87, 164, 142, 73, 34],backgroundColor:["rgba(99,102,241,0.7)", "rgba(139,92,246,0.9)", "rgba(99,102,241,0.7)", "rgba(99,102,241,0.7)", "rgba(99,102,241,0.7)"],borderRadius:6,borderWidth:0}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#94a3b8'},title:{display:true,text:'Email Count',color:'#818cf8'}},x:{grid:{display:false},ticks:{color:'#94a3b8',font:{size:10},maxRotation:35}}}}});</script></div>
   <div class="stats-grid"><div class="stat-box"><span class="stat-value">500</span><span class="stat-label">Emails Processed</span></div><div class="stat-box"><span class="stat-value">393</span><span class="stat-label">Leads Extracted</span></div><div class="stat-box"><span class="stat-value">15.7%</span><span class="stat-label">Dedup Rate</span></div><div class="stat-box"><span class="stat-value">97.2%</span><span class="stat-label">Routing Accuracy</span></div></div>
 </div>
-
 <div class="card">
   <div class="section-title">Tech Stack</div>
   <div class="badges" style="margin-bottom:0"><span class="badge">GPT-4o</span> <span class="badge">LangChain</span> <span class="badge">FastAPI</span> <span class="badge">SQLite</span></div>
 </div>
-
 <footer>
-  <p>Built by <a href="https://sandyyy123.github.io">Sandeep Grover</a> ·
-     <a href="https://github.com/Sandyyy123/construction-email-ai-analyzer" target="_blank">GitHub Repo</a> ·
-     <a href="https://linkedin.com/in/sandeep-grover-b3192a16" target="_blank">LinkedIn</a></p>
+  <p>Built by <a href="https://sandyyy123.github.io">Sandeep Grover</a> &nbsp;·&nbsp;
+     <a href="https://github.com/Sandyyy123/construction-email-ai-analyzer" target="_blank">View on GitHub</a></p>
 </footer>
-
 </body>
 </html>
